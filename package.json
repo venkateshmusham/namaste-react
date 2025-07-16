@@ -1,0 +1,29 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "this is react learning course with Akshay Saini",
+  "scripts": {
+    "test": "zest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkateshmusham/namaste-react.git"
+  },
+  "keywords": [],
+  "author": "Venkatesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venkateshmusham/namaste-react/issues"
+  },
+  "homepage": "https://github.com/venkateshmusham/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
+}
