@@ -1,21 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const SubHeading = () => {
-    return <h2 className="subheading">This is a subheading</h2>
+const HeaderComponent = () => {
+    return (<div className="header-ctr">
+        <div className="logo-ctr">
+            <img sre="" alt="logo" />
+        </div>
+        <div class="nav-item">
+            <ul>
+                <li>Home</li>
+                <li>About US</li>
+                <li>Contact US</li>
+                <li>Cart</li>
+            </ul>
+        </div>
+    </div>);
 }
 
-const subHeadingJSExpression = <h3>This is H3 Tag</h3> 
+const BodyComponent = () => {
+    return (
+        <div></div>
+    );
+}
 
-const Heading = () => {
-    return (<div id="container">
-        <h1 className="heading">This is a heading</h1>
-        <SubHeading />
-        {subHeadingJSExpression}
-        {console.log(100+200)}
-        </div>);
+const FooterComponent = () => {
+    return (
+        <div>
+            <ul>
+                <li>Copyrights to Musham</li>
+            </ul>
+        </div>
+    )
+}
+
+const App = () => {
+    return (
+        <div className="app">
+            <HeaderComponent />
+            <BodyComponent />
+            <FooterComponent />
+        </div>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Heading />);
+root.render(<App />);
