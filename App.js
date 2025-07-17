@@ -1,29 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement(
-    "div", 
-    {id:"parent"}, 
-    [
-        React.createElement(
-            "div", 
-            {id:"child", key:"child", className: "child-class"}, 
-            [
-                React.createElement("h1", {id:"heading", key:"heading"}, "this is child"), 
-                React.createElement("h2", {id:"sub-heading", key:"sub-heading"}, "this is sub child")
-            ]
-        ),
-        React.createElement(
-            "div", 
-            {id:"child2", key:"child2"}, 
-            [
-                React.createElement("h1", {id:"heading", key:"heading"}, "this is child"), 
-                React.createElement("h2", {id:"sub-heading", key:"sub-heading"}, "this is sub child")
-            ]
-        )
-    ]
-);
+const SubHeading = () => {
+    return <h2 className="subheading">This is a subheading</h2>
+}
+
+const subHeadingJSExpression = <h3>This is H3 Tag</h3> 
+
+const Heading = () => {
+    return (<div id="container">
+        <h1 className="heading">This is a heading</h1>
+        <SubHeading />
+        {subHeadingJSExpression}
+        {console.log(100+200)}
+        </div>);
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(<Heading />);
