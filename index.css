@@ -1,2 +1,49 @@
-#heading {color: red;}
-.child-class #heading {color: blue;}
+body {margin: unset;}
+#root {margin: 0 80px;}
+.header-ctr {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+.header-ctr .logo-ctr { width: 100px; }
+.header-ctr .logo-ctr img {width: 100%;}
+.header-ctr ul {     gap: 40px;
+    font-size: 28px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0; }
+.rests-wpr {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.rest-card-ctr {
+    width: 280px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rest-card-ctr:hover {     box-shadow: 0 4px 16px 1px rgba(0, 0, 0, .15);
+    border: 1px solid #D9D9D9; border-radius: 5px; }
+
+.rest-card-ctr .logo img {width: 100%;}
+.rest-card-ctr .header {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+}
+.rest-card-ctr .header h2, .rest-card-ctr .header h4 { padding: 0; margin: 0; }
+.rest-card-ctr .header h4 {font-weight: 100;}
+.rest-card-ctr .ext-info {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 0px 16px;
+}
+
+
+.footer-ctr { margin-top: 200px; }
