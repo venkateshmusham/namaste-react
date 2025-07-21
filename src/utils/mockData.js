@@ -1,46 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const HeaderComponent = () => {
-    return (<div className="header-ctr">
-        <div className="logo-ctr">
-            <img src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-food-delivery--logo-design-template-png-image_4859990.jpg" alt="logo" />
-        </div>
-        <div className="nav-item">
-            <ul>
-                <li>Home</li>
-                <li>About US</li>
-                <li>Contact US</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-    </div>);
-}
-
-const RestaurantCard = ({resObj}) => {
-    const { name, cuisines, avgRating, sla, costForTwo, cloudinaryImageId } = resObj;
-    const {deliveryTime} = sla;
-    return (
-        
-            <div className="rest-card-ctr">
-                <div className="logo">
-                    <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId} alt="rest-logo" />
-                </div>
-                <div className="header">
-                    <h2>{name}</h2>
-                    <h4>{cuisines.join(", ")}</h4>
-                </div>
-                <div className="ext-info">
-                    <div>{avgRating}</div>
-                    <div>{deliveryTime} Mins</div>
-                    <div>{costForTwo}</div>
-                </div>
-            </div>
-        
-    )
-}
-
-const restList = [
+export const restaurantsList = [
 {
 "info": {
 "id"
@@ -3041,40 +2999,3 @@ true,
 }
 }
 ]
-
-const BodyComponent = () => {
-    return (
-        <div className="body-ctr">
-            <div className="search-ctr">
-                <h2>Search Box Container</h2>
-            </div>
-            <div className="rests-wpr">
-                {restList.map((rest) => <RestaurantCard key={rest.info.id} resObj={rest.info} />)}
-            </div>
-        </div>
-    );
-}
-
-const FooterComponent = () => {
-    return (
-        <div className="footer-ctr">
-            <ul>
-                <li>Copyrights to Musham</li>
-            </ul>
-        </div>
-    )
-}
-
-const App = () => {
-    return (
-        <div className="app">
-            <HeaderComponent />
-            <BodyComponent />
-            <FooterComponent />
-        </div>
-    );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<App />);
