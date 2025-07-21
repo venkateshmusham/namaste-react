@@ -1,0 +1,2 @@
+export const LOGO_URL = "https://png.pngtree.com/png-clipart/20190924/original/pngtree-food-delivery--logo-design-template-png-image_4859990.jpg";
+export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";

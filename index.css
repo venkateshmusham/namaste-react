@@ -45,5 +45,6 @@ body {margin: unset;}
     padding: 0px 16px;
 }
 
+.filters-ctr { display: flex; margin: 20px 0; }
 
 .footer-ctr { margin-top: 200px; }
