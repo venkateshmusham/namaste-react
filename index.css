@@ -1,5 +1,6 @@
 body {margin: unset;}
 #root {margin: 0 80px;}
+h1, h2, h3, h4, h5, h6 {padding: unset; margin: unset;}
 .header-ctr {
     display: flex;
     justify-content: space-between;
@@ -13,28 +14,38 @@ body {margin: unset;}
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0; }
+    margin: 0; 
+}
+.shimmer-ctr { display: flex; flex-wrap: wrap; gap: 16px; }
+.shimmer-card { width: 280px; height: 320px; background: #D9D9D9; }
+
+.search-ctr {
+    margin: 20px 0;
+}
 .rests-wpr {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    
 }
 .rest-card-ctr {
     width: 280px;
-    height: 420px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding-bottom: 16px;
 }
 
 .rest-card-ctr:hover {     box-shadow: 0 4px 16px 1px rgba(0, 0, 0, .15);
     border: 1px solid #D9D9D9; border-radius: 5px; }
 
-.rest-card-ctr .logo img {width: 100%;}
+.rest-card-ctr .logo { height: 160px; }
+.rest-card-ctr .logo img {width: 100%;height: 100%; object-fit: cover;}
 .rest-card-ctr .header {
     display: flex;
     flex-direction: column;
     padding: 0px 16px;
+
 }
 .rest-card-ctr .header h2, .rest-card-ctr .header h4 { padding: 0; margin: 0; }
 .rest-card-ctr .header h4 {font-weight: 100;}
