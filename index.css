@@ -58,4 +58,18 @@ h1, h2, h3, h4, h5, h6 {padding: unset; margin: unset;}
 
 .filters-ctr { display: flex; margin: 20px 0; }
 
+.menu-ctr, .category { display: flex; flex-direction: column; gap: 16px; }
+.catergory-ttl {
+    background: #f0f0f0;
+    padding: 10px;
+}
+.item-ttl {  }
+.menu-item { display: flex; justify-content: space-between; align-items: center; padding: 0 50px; }
+.item-img-ctr {width: 100px;}
+.item-img-ctr img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.user-ctr {display: flex; gap: 16px; padding: 16px;}
 .footer-ctr { margin-top: 200px; }
