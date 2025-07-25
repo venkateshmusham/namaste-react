@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import { Link } from "react-router";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
@@ -42,7 +43,7 @@ export const Body = () => {
                 <button onClick={filterResults}>4.5+ Stars</button>
             </div>
             <div className="rests-wpr">
-                {filteredRestList.map((rest) => <RestaurantCard key={rest.card.card.info.id} resObj={rest.card.card.info} />)}
+                {filteredRestList.map((rest) => <Link key={rest.card.card.info.id} to={"/restaurants/"+rest.card.card.info.id}><RestaurantCard  resObj={rest.card.card.info} />  </Link> )}
             </div>
         </div>
     );
