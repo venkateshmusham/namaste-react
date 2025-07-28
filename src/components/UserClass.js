@@ -10,13 +10,25 @@ class UserClass extends React.Component {
         console.log( this.props.name + " Child Constructor");
     }
 
-    componentDidMount(){
+    componentDidMount() {
         console.log( this.props.name + " Child Did Mount");
+        this.timer = setInterval(() => {
+            console.log("printing console");
+        }, 1000)
     };
+
+    componentDidUpdate() {
+        console.log( this.props.name + " Child updated");
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timer);
+        console.log("Component unmounted and cleared the interval");
+    }
 
     render() {
         console.log( this.props.name + " Child Render");
-        const { name, location, linkedin } = this.props;
+        const { name, location, linkedin, type } = this.props;
         const { count } = this.state;
         return (
             <div>
@@ -27,6 +39,7 @@ class UserClass extends React.Component {
                         Linked-In : venkatesh-musham-87653135
                     </a>
                 </h3>
+                <h4>{type}</h4>
                 <div>
                     <span> Count : {count} </span>
                     <button onClick={() => {

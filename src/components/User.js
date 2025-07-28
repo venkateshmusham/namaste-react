@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const User = ({name, location, linkedin}) => {
+const User = ({name, location, linkedin, type}) => {
     
     const [count, setCount] = useState(0);
 
@@ -13,6 +13,7 @@ const User = ({name, location, linkedin}) => {
                     Linked-In : venkatesh-musham-87653135
                 </a>
             </h3>
+            <h4>{type}</h4>
             <div>
                 <span> Count : {count} </span>
                 <button onClick={() => {

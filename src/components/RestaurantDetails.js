@@ -42,7 +42,7 @@ const RestaurantDetails = () => {
                     const { id, name, price, ratings, isVeg, description, imageId, defaultPrice } = cat.card.info;
                     if(price) {
                         return (
-                            <div key={cat.id} className="category">
+                            <div key={id} className="category">
                                 <div key={id} className="menu-item">
                                     <div>
                                         <div className="item-ttl">
