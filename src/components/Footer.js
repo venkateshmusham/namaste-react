@@ -2,7 +2,7 @@ export const Footer = () => {
     return (
         <div className="footer-ctr">
             <ul>
-                <li>Copyrights to Musham</li>
+                <li>Copyrights to Food Delivery App</li>
             </ul>
         </div>
     )

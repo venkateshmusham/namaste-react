@@ -1,3 +1,4 @@
 export const LOGO_URL = "https://png.pngtree.com/png-clipart/20190924/original/pngtree-food-delivery--logo-design-template-png-image_4859990.jpg";
 export const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-export const REST_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.1068408&lng=77.57612329999999&restaurantId=";
+export const RESTS_URL = "https://www.swiggy.com/dapi/restaurants/search/v3?lat=13.10197&lng=77.5863591&str=Biryani&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=a7d4b45a-16be-8f6d-2b6b-e95ac25e39b4&metaData=%7B%22type%22%3A%22DISH%22%2C%22data%22%3A%7B%22vegIdentifier%22%3A%22NA%22%2C%22cloudinaryId%22%3A%22Autosuggest%2FTop%2520200%2520queries%2FBiryani.png%22%2C%22dishFamilyId%22%3A%22846613%22%2C%22dishFamilyIds%22%3A%5B%22846613%22%5D%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Dish%22%7D&selectedPLTab=RESTAURANT";
+export const REST_DTLS_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.1068408&lng=77.57612329999999&restaurantId=";
