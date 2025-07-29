@@ -1,25 +1,17 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { REST_URL, CDN_URL } from "../utils/constants";
+
+import { CDN_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
+
+import useRestaurantDetails from "../utils/useRestaurantDetails";
+
 const RestaurantDetails = () => {
     const { resId } = useParams();
-    const [ resDetails, setResDetails ] = useState(null);
-    useEffect(() => {
-        fetchRestaurantDetails();
-    }, [])
-
-    const fetchRestaurantDetails = async () => {
-        const data = await fetch(REST_URL + resId);
-        const json = await data.json();
-
-        setResDetails(json?.data);
-    }
+    
+    const resDetails = useRestaurantDetails(resId);
 
     if(resDetails === null) {
-        return (
-            <Shimmer />
-        )
+        return ( <Shimmer /> )
     }
 
     const resInfo = resDetails.cards[2].card.card.info;
