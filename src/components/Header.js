@@ -6,44 +6,34 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
     const [btnName, setBtnName] = useState("Log In");
     const onlineStatus = useOnlineStatus();
-    return (<div className="header-ctr">
-        <div className="logo-ctr">
+    return (<div className="flex items-center justify-between">
+        <div className="w-10">
             <img src={LOGO_URL} alt="logo" />
         </div>
-        <div className="nav-item">
-            <ul>
-                <li>
-                    <span
-                        style={{
-                        display: "inline-block",
-                        width: "20px",
-                        height: "20px",
-                        borderRadius: "50%",
-                        backgroundColor: onlineStatus ? "green" : "red",
-                        marginLeft: "5px"
-                        }}
-                    ></span>
-                </li>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/about">About US</Link>
-                </li>
-                <li>
-                    <Link to="/contact">Contact US</Link>
-                </li>
-                <li>
-                    <Link to="/grocery">Grocery</Link>
-                </li>
-                <li>Cart</li>
-                <li>
-                    <button onClick={() => {
-                        setBtnName(btnName === "Log In" ? "Log Out" : "Log In")
-                    }}>{btnName}</button>
-                </li>
-            </ul>
-        </div>
+        <ul className="flex gap-4 items-center">
+            <li>
+                <span className={`w-4 h-4 inline-block rounded-full ${onlineStatus ? 'bg-green-500' : 'bg-red-500'}`}></span>
+            </li>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
+            <li>
+                <Link to="/about">About US</Link>
+            </li>
+            <li>
+                <Link to="/contact">Contact US</Link>
+            </li>
+            <li>
+                <Link to="/grocery">Grocery</Link>
+            </li>
+            <li>Cart</li>
+            <li>
+                <button className="" onClick={() => {
+                    setBtnName(btnName === "Log In" ? "Log Out" : "Log In")
+                }}>{btnName}</button>
+            </li>
+        </ul>
+        
     </div>);
 }
 
