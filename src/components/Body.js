@@ -35,22 +35,24 @@ export const Body = () => {
     return filteredRestList.length === 0 ? (
         <Shimmer />
     ) : (
-        <div className="body-ctr">
-            <div className="search-ctr">
-                <input type="text" className="search-text" value={searchText} onChange={(e) => {
-                    setSearchText(e.target.value);
-                }} placeholder="search by restaurant name" />
-                <button onClick={() => {
-                    const filterRestList = restList.filter((rest) => rest.card.card.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                    setFilteredRestList(filterRestList);
-                }}>Search</button>
+        <div className="flex flex-col gap-5 mt-5">
+            <div className="flex justify-between">
+                <div className="flex gap-10">
+                    <input type="text" name="searchText" className="border border-red-400 px-2 py-1 rounded-md w-80" value={searchText} placeholder="search by restaurant name"  onChange={(e) => {
+                        setSearchText(e.target.value);
+                    }} />
+                    <button className="bg-red-400 font-white text-white py-1 px-4 rounded-md" onClick={() => {
+                        const filterRestList = restList.filter((rest) => rest.card.card.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                        setFilteredRestList(filterRestList);
+                    }}>Search</button>
+                </div>
+                <div className="flex gap-8 items-center">
+                    <h2>Filters : </h2>
+                    <button className="bg-green-300 font-white text-white py-1 px-4 rounded-md" onClick={filterResults}>4+ Stars</button>
+                </div>
             </div>
-            <div className="filters-ctr">
-                <h2>Filters : </h2>
-                <button onClick={filterResults}>4+ Stars</button>
-            </div>
-            <div className="rests-wpr">
-                {filteredRestList.map((rest) => <Link key={rest.card.card.info.id} to={"/restaurants/"+rest.card.card.info.id}><RestaurantCard  resObj={rest.card.card.info} />  </Link> )}
+            <div className="flex flex-wrap gap-5">
+                {filteredRestList.map((rest) => <Link className="w-75 border border-blue-100 rounded-md hover:bg-amber-100" key={rest.card.card.info.id} to={"/restaurants/"+rest.card.card.info.id}><RestaurantCard  resObj={rest.card.card.info} />  </Link> )}
             </div>
         </div>
     );
