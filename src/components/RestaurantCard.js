@@ -14,13 +14,24 @@ const RestaurantCard = ({resObj}) => {
                     <h4 className="font-light text-wrap overflow-hidden text-ellipsis whitespace-nowrap">{cuisines.join(", ")}</h4>
                 </div>
                 <div className="flex justify-between px-2">
-                    <div>{sla?.slaString} Mins</div>
+                    <div>{sla?.slaString}</div>
                     <div className="flex gap-2 items-center"> {avgRating} <BiStar className="text-yellow-400" /> </div>
                 </div>
                 <div className="font-medium px-2 mb-2">{costForTwoMessage}</div>
             </div>
         
     )
+}
+
+export const WithPromotedLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <>
+            <label className="bg-black text-white p-1 absolute left-[-10px] top-2">Promoted</label>
+            <RestaurantCard {...props} />
+            </>
+        );
+    }
 }
 
 export default RestaurantCard;
