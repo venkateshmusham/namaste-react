@@ -12,7 +12,6 @@ const useRestaurantDetails = (resId) => {
         const data = await fetch(REST_DTLS_URL + resId);
         const json = await data.json();
 
-        console.log(json);
         setRestaurantDetails(json.data);
     };
 
